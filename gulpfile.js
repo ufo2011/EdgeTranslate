@@ -144,6 +144,7 @@ function buildJS() {
     webpack_config.plugins = webpack_config.plugins || [];
     webpack_config.plugins.push(
         new webpack.DefinePlugin({
+            "process.env.RUN_ENV": JSON.stringify(environment),
             BROWSER_ENV: JSON.stringify(browser),
             BUILD_ENV: JSON.stringify(environment),
         })
