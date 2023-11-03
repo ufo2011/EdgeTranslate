@@ -3,7 +3,7 @@
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/EdgeTranslate/EdgeTranslate/blob/master/LICENSE.MIT)
-[![License](https://img.shields.io/badge/License-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/EdgeTranslate/EdgeTranslate/blob/master/LICENSE.NPL)
+[![License](<https://img.shields.io/badge/License-NPL%20(The%20996%20Prohibited%20License)-blue.svg>)](https://github.com/EdgeTranslate/EdgeTranslate/blob/master/LICENSE.NPL)
 
 [![Version](https://img.shields.io/github/release/EdgeTranslate/EdgeTranslate.svg?label=version)](https://github.com/EdgeTranslate/EdgeTranslate/releases)
 [![Build Status](https://travis-ci.com/EdgeTranslate/EdgeTranslate.svg?branch=master)](https://travis-ci.com/github/EdgeTranslate/EdgeTranslate)
@@ -22,55 +22,56 @@
 ![demo_zh_CN](./images/demo_zh_CN.gif)
 
 ## 下载
-[Microsoft Edge扩展商店](https://microsoftedge.microsoft.com/addons/detail/bfdogplmndidlpjfhoijckpakkdjkkil)
-/ [Chrome应用商店](https://chrome.google.com/webstore/detail/bocbaocobfecmglnmeaeppambideimao)
-/ [Firefox附加组件商店](https://addons.mozilla.org/firefox/addon/edge_translate/)
-/ [QQ浏览器应用商店](https://appcenter.browser.qq.com/search/detail?key=edgetranslate&id=bocbaocobfecmglnmeaeppambideimao%20&title=edgetranslate)
-/ [360浏览器应用商店](https://ext.se.360.cn/webstore/detail/jkhojcaggkaojlhfddocjkkphfdkejeg)
 
-__注意：__ 火狐浏览器附加组件商店里的版本已不再支持网页翻译，需要网页翻译的用户请看[这里](./wiki/zh_CN/致火狐用户.md)。
+[Microsoft Edge 扩展商店](https://microsoftedge.microsoft.com/addons/detail/bfdogplmndidlpjfhoijckpakkdjkkil)
+/ [Chrome 应用商店](https://chrome.google.com/webstore/detail/bocbaocobfecmglnmeaeppambideimao)
+/ [Firefox 附加组件商店](https://addons.mozilla.org/firefox/addon/edge_translate/)
+/ [QQ 浏览器应用商店](https://appcenter.browser.qq.com/search/detail?key=edgetranslate&id=bocbaocobfecmglnmeaeppambideimao%20&title=edgetranslate)
+/ [360 浏览器应用商店](https://ext.se.360.cn/webstore/detail/jkhojcaggkaojlhfddocjkkphfdkejeg)
+
+**注意：** 火狐浏览器附加组件商店里的版本已不再支持网页翻译，需要网页翻译的用户请看[这里](./wiki/zh_CN/致火狐用户.md)。
 
 ## 手动安装
 
-从 [GitHub Releases](https://github.com/EdgeTranslate/EdgeTranslate/releases) 下载浏览器对应的安装包 (Chrome与QQ浏览器使用相同的安装包) 。
+从 [GitHub Releases](https://github.com/EdgeTranslate/EdgeTranslate/releases) 下载浏览器对应的安装包 (Chrome 与 QQ 浏览器使用相同的安装包) 。
 
 建议下载最新版本。
 
 ### Chrome
 
-* 将下载好的`.zip`安装包解压到本地；
+-   将下载好的`.zip`安装包解压到本地；
 
-* 在浏览器中访问： `chrome://extensions` ；
+-   在浏览器中访问： `chrome://extensions` ；
 
-* 开启右上角的`开发者模式`；
+-   开启右上角的`开发者模式`；
 
-* 点击左上角`加载已解压的扩展程序`；
+-   点击左上角`加载已解压的扩展程序`；
 
-* 找到刚才解压出来的文件夹，点确定；
+-   找到刚才解压出来的文件夹，点确定；
 
-### QQ浏览器
+### QQ 浏览器
 
-* 将下载好的`.zip`安装包解压到本地；
+-   将下载好的`.zip`安装包解压到本地；
 
-* 在浏览器中访问: `qqbrowser://extensions/manage`.
+-   在浏览器中访问: `qqbrowser://extensions/manage`.
 
-* 开启右上角的`开发者模式`；
+-   开启右上角的`开发者模式`；
 
-* 点击左上角`加载已解压的扩展程序`；
+-   点击左上角`加载已解压的扩展程序`；
 
-* 找到刚才解压出来的文件夹，点确定；
+-   找到刚才解压出来的文件夹，点确定；
 
 ### Firefox
 
-* 使用Firefox下载`.xapi`文件，下载完成后会自动安装；
+-   使用 Firefox 下载`.xapi`文件，下载完成后会自动安装；
 
-### 360浏览器
+### 360 浏览器
 
-* 使用360浏览器打开安装包，即可自动安装。
+-   使用 360 浏览器打开安装包，即可自动安装。
 
 ## 构建扩展
 
-构建本扩展需要安装[Node.js](https://nodejs.org/)。
+构建本扩展需要安装 [Node.js](https://nodejs.org/) 和 [yarn](https://classic.yarnpkg.com/en/docs/install)。
 
 克隆仓库：
 
@@ -81,48 +82,42 @@ git clone https://github.com/EdgeTranslate/EdgeTranslate.git
 安装依赖：
 
 ```shell
-npm install
+yarn
 ```
 
-构建Chrome扩展：
+构建 Chrome 和 Firefox 扩展：
 
 ```shell
-npm run build:chrome
+yarn build
 ```
 
-构建Firefox扩展：
-
-```shell
-npm run build:firefox
-```
-
-构建完成之后在 `./build/chrome/` 和 `./build/firefox/` 文件夹下可分别找到已解压的Chrome扩展和Firefox扩展。
+构建完成之后在 `./packages/EdgeTranslate/build/chrome/` 和 `./packages/EdgeTranslate/build/firefox/` 文件夹下可分别找到已解压的 Chrome 扩展和 Firefox 扩展。
 
 ## 在浏览器中加载已解压的扩展
 
 ### Chrome
 
-* 在浏览器中访问： `chrome://extensions` ；
+-   在浏览器中访问： `chrome://extensions` ；
 
-* 开启右上角的`开发者模式`；
+-   开启右上角的`开发者模式`；
 
-* 点击左上角`加载已解压的扩展程序`；
+-   点击左上角`加载已解压的扩展程序`；
 
-* 找到刚才克隆下来的仓库，打开 `build` 文件夹，选择其中的 `chrome` 文件夹；
+-   找到刚才克隆下来的仓库，打开 `build` 文件夹，选择其中的 `chrome` 文件夹；
 
-* 现在你就可以在Chrome中体验本扩展了。
+-   现在你就可以在 Chrome 中体验本扩展了。
 
 ### Firefox
 
-* 在浏览器中访问： `about:debugging` ；
+-   在浏览器中访问： `about:debugging` ；
 
-* 选中该页面上的`启用附加组件调试`；
+-   选中该页面上的`启用附加组件调试`；
 
-* 点击`临时载入附加组件`；
+-   点击`临时载入附加组件`；
 
-* 找到刚才克隆下来的仓库， 打开 `build/firefox` , 选择其中的任意一个文件；
+-   找到刚才克隆下来的仓库， 打开 `build/firefox` , 选择其中的任意一个文件；
 
-* 现在你就可以在Firefox中体验本扩展了。
+-   现在你就可以在 Firefox 中体验本扩展了。
 
 ## 了解更多
 
@@ -150,8 +145,8 @@ QQ 群: [侧边翻译用户交流群](https://jq.qq.com/?_wv=1027&k=gT5EYfFB)
 <table>
   <tr>
     <td align="center"><a href="https://nickyc975.github.io/"><img src="https://avatars.githubusercontent.com/u/25877145?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicky Chen</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=nickyc975" title="Code">💻</a> <a href="#data-nickyc975" title="Data">🔣</a> <a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=nickyc975" title="Documentation">📖</a> <a href="#ideas-nickyc975" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-nickyc975" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://blog.csdn.net/Clark_Fitz817"><img src="https://avatars.githubusercontent.com/u/27533910?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucky Feng</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=Mark-Fenng" title="Code">💻</a> <a href="#design-Mark-Fenng" title="Design">🎨</a> <a href="#mentoring-Mark-Fenng" title="Mentoring">🧑‍🏫</a> <a href="#ideas-Mark-Fenng" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-Mark-Fenng" title="Maintenance">🚧</a></td>
-    <td align="center"><a href="https://github.com/sansroman"><img src="https://avatars.githubusercontent.com/u/17476682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zia</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=sansroman" title="Code">💻</a> <a href="#design-sansroman" title="Design">🎨</a> <a href="#ideas-sansroman" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/YunFeng0817"><img src="https://avatars.githubusercontent.com/u/27533910?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yun Feng</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=YunFeng0817" title="Code">💻</a> <a href="#design-YunFeng0817" title="Design">🎨</a> <a href="#mentoring-YunFeng0817" title="Mentoring">🧑‍🏫</a> <a href="#ideas-YunFeng0817" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-YunFeng0817" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/tboevil"><img src="https://avatars.githubusercontent.com/u/17476682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zia</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=tboevil" title="Code">💻</a> <a href="#design-tboevil" title="Design">🎨</a> <a href="#ideas-tboevil" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://www.yang-bo.com/"><img src="https://avatars.githubusercontent.com/u/601530?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yang, Bo</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=Atry" title="Code">💻</a> <a href="#ideas-Atry" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/gdh1995"><img src="https://avatars.githubusercontent.com/u/5547703?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dahan Gong</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=gdh1995" title="Code">💻</a> <a href="#plugin-gdh1995" title="Plugin/utility libraries">🔌</a></td>
   </tr>
@@ -160,12 +155,13 @@ QQ 群: [侧边翻译用户交流群](https://jq.qq.com/?_wv=1027&k=gT5EYfFB)
     <td align="center"><a href="https://github.com/derlans"><img src="https://avatars.githubusercontent.com/u/58926947?v=4?s=100" width="100px;" alt=""/><br /><sub><b>derlans</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=derlans" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Isildur46"><img src="https://avatars.githubusercontent.com/u/19759799?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Isildur46</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=Isildur46" title="Code">💻</a></td>
     <td align="center"><a href="https://ykyuki.net/"><img src="https://avatars.githubusercontent.com/u/28839969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ykyuki</b></sub></a><br /><a href="#translation-ykyuki" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/electrolom42"><img src="https://avatars.githubusercontent.com/u/25820887?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ElectroLom</b></sub></a><br /><a href="#translation-electrolom42" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/khan-san"><img src="https://avatars.githubusercontent.com/u/25820887?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Khan-San</b></sub></a><br /><a href="#translation-khan-san" title="Translation">🌍</a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://axionl.me/"><img src="https://avatars.githubusercontent.com/u/8396456?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ArielAxionL</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=axionl" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/vanja-san"><img src="https://avatars.githubusercontent.com/u/7201687?v=4?s=100" width="100px;" alt=""/><br /><sub><b>The_BadUser</b></sub></a><br /><a href="#translation-vanja-san" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/knlyknly"><img src="https://avatars.githubusercontent.com/u/1418612?v=4?s=100" width="100px;" alt=""/><br /><sub><b>knlyknly</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=knlyknly" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/wfk007"><img src="https://avatars.githubusercontent.com/u/22289445?v=4?s=100" width="100px;" alt=""/><br /><sub><b>fukang wang</b></sub></a><br /><a href="https://github.com/EdgeTranslate/EdgeTranslate/commits?author=wfk007" title="Documentation">📖</a></td>
   </tr>
 </table>
 
@@ -184,7 +180,7 @@ QQ 群: [侧边翻译用户交流群](https://jq.qq.com/?_wv=1027&k=gT5EYfFB)
 
 开发这个项目花费了我们许多的时间和精力，如果你真的觉得这个项目对你有帮助，不妨请我们喝罐可乐，支持我们继续做下去！
 
-当然，这 __纯属自愿__，打赏并不能获得什么优待，不打赏也不会有任何影响，请量力而为！
+当然，这 **纯属自愿**，打赏并不能获得什么优待，不打赏也不会有任何影响，请量力而为！
 
 |                                                                    微信                                                                     |                                                                    支付宝                                                                     |
 | :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------: |
